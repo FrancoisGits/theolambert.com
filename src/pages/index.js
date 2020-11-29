@@ -1,21 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Helmet from "react-helmet"
 import SEO from "../components/seo"
+import Person from "../components/person"
+import Skills from "../components/skills"
+import Work from "../components/work"
+import Education from "../components/education"
+import Hobbies from "../components/hobbies"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Helmet>
+      <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'/>
+      <script src="https://kit.fontawesome.com/51fc2db30d.js" crossOrigin="anonymous"></script>
+    </Helmet>
+    <SEO title="Resume"/>
+    <Person/>
+    <Skills/>
+    <Work/>
+    <Education/>
+   <Hobbies/>
   </Layout>
 )
 
