@@ -1,0 +1,10 @@
+.work{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+
+  &__title{
+    margin-bottom: 1em;
+  }
+}
