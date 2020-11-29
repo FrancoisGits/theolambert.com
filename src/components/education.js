@@ -2,7 +2,6 @@ import React from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import Card from "react-bootstrap/Card"
 import CardDeck from "react-bootstrap/CardDeck"
-import Container from "react-bootstrap/Container"
 import styles from "./education.module.css"
 
 export default () => {
@@ -26,13 +25,13 @@ export default () => {
   const edu = data.allEducation.edges
 
   return (
-    <Container id="education" className={styles.edu}>
+    <div id="education" className={styles.edu}>
       <h1 className={styles.edu__title}>Education</h1>
 
-      <CardDeck>
+      <CardDeck className={styles.edu__cardDeck}>
         {edu.map(({node}) => (
-          <Card key={node.id} style={{minWidth: '18rem', maxWidth: '20rem', marginTop: '1em'}}>
-            <Card.Header>{node.from && node.from + ' to '} {node.to}</Card.Header>
+          <Card border="light" className={styles.edu__cardDeck__card} key={node.id}>
+            <Card.Header className={styles.edu__cardDeck__card__header}>{node.from && node.from + ' to '} {node.to}</Card.Header>
 
             <Card.Body>
               <Card.Title>{node.name}</Card.Title>
@@ -47,6 +46,6 @@ export default () => {
           </Card>
         ))}
       </CardDeck>
-    </Container>
+    </div>
   )
 }

@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 3em;
+  margin: 5em auto 2.5em auto;
+  max-width: 80%;
 
   &__title{
     margin: 0 auto 1em auto;
@@ -10,18 +11,20 @@
 
   &__technical {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     margin: 1.5vh 0;
     flex-wrap: wrap;
 
     &__title{
-      margin-right: 3em;
+      margin: 1.2em 3em 1.2em 0;
     }
 
     &__list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
 
       &__item{
         margin: 0 0.5em;
@@ -31,18 +34,21 @@
 
   &__language {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     margin: 1.5vh 0;
     flex-wrap: wrap;
 
     &__title{
-      margin-right: 3em;
+      margin: 1.2em 3em 1.2em 0;
     }
 
     &__list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      max-width: 50vmax;
 
       &__item{
         display: flex;
@@ -59,7 +65,7 @@
         }
 
         &__level{
-          background-color: gray;
+          background-color: var(--gray);
           color: var(--light);
           font-size: 0.9em;
           padding: 0.35em;
@@ -72,18 +78,20 @@
 
   &__misc {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin: 1.5vh 0;
 
     &__title{
-      margin-right: 3em;
+      margin: 1.2em 3em 1.2em 0;
     }
 
     &__list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
 
       &__item{
         margin: 0 1em;

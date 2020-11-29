@@ -4,6 +4,7 @@
   align-items: center;
   margin: 5vh auto;
   width: 100%;
+  max-width: 90%;
 
   &__header {
     display: flex;
@@ -14,19 +15,26 @@
 
     &__image {
       border-radius: 50%;
-      width: 25%;
+      max-width: 12rem !important; //overriding bootstrap img-fluid
+      box-shadow:  11px 11px 22px #e0e0e0,
+      -11px -11px 22px #ffffff;
     }
 
     &__nameParagraph {
       font-weight: 900;
       font-size: 1.1em;
       margin-left: 1em;
-    }
+      text-align: center;
 
-    &__name {
-      font-weight: 500;
-      font-size: 2.6em;
-      margin-right: 1rem;
+      &__name {
+        font-weight: 500;
+        font-size: 2.6em;
+        margin-right: 1rem;
+      }
+
+      &__location{
+        display: inline-block;
+      }
     }
 
     &__catchphrase {

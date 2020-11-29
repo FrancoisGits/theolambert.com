@@ -21,7 +21,7 @@ export default () => {
   const socials = data.allSocials.edges
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="white" sticky="top">
+    <Navbar collapseOnSelect bg="white" expand="lg" sticky="top">
       <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -31,11 +31,10 @@ export default () => {
           <Nav.Link href="#education">education</Nav.Link>
           <Nav.Link href="#hobbies">hobbies</Nav.Link>
         </Nav>
-        <Nav>
+        <Nav className="flex-row justify-content-around">
           {socials.map(({node}) => (
-            <Nav.Link target="_blank" href={node.link}>
-              <i key={node.id}
-                 className={node.faLogo}
+            <Nav.Link key={node.id} target="_blank" href={node.link}>
+              <i className={node.faLogo}
                  style={{fontSize: '2.5em'}}/>
             </Nav.Link>
           ))

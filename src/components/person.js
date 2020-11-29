@@ -3,11 +3,10 @@ import {graphql, useStaticQuery} from "gatsby"
 import * as Moment from "moment"
 import {Twemoji} from "react-emoji-render"
 import styles from "./person.module.css"
-import Container from "react-bootstrap/Container"
 import FigureImage from "react-bootstrap/FigureImage"
 
 export default () => {
-  const data = useStaticQuery(graphql`
+  const person = useStaticQuery(graphql`
       query {
           person {
               birthDate
@@ -22,25 +21,27 @@ export default () => {
       }
   `).person
 
-  const age = Moment().diff(Moment(data.birthDate, 'YYYY-MM-DD'), 'years')
+  const age = Moment().diff(Moment(person.birthDate, 'YYYY-MM-DD'), 'years')
 
   return (
-    <Container id="introduction" className={styles.person}>
+    <div id="introduction" className={styles.person}>
       <div className={styles.person__header}>
-        <FigureImage width={'200vmin'} style={{borderRadius:'50%'}}
-               src='/face.png'/>
+        <FigureImage className={styles.person__header__image}
+                     src='/face.png'/>
         <p className={styles.person__header__nameParagraph}>
-        <span className={styles.person__header__name}>
-          {data.firstName} {data.lastName}
+        <span className={styles.person__header__nameParagraph__name}>
+          {person.firstName} {person.lastName}
         </span>
-          {age}, crafting NASA spaceships from {data.location} <Twemoji text=':rocket:'/>
+          <span className={styles.person__header__nameParagraph__location}>
+          {age}, <span>crafting NASA spaceships from</span> {person.location} <Twemoji text=':rocket:'/>
+          </span>
         </p>
       </div>
 
       <h2 className={styles.person__header__catchphrase}>
-        {data.catchphrase}
+        {person.catchphrase}
       </h2>
-      <p className={styles.person__header__intro}>{data.intro}</p>
-    </Container>
+      <p className={styles.person__header__intro}>{person.intro}</p>
+    </div>
   )
 }

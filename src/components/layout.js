@@ -6,7 +6,7 @@ const Layout = ({children}) => {
 
   return (
     <div style={{
-      margin: '2vh auto',
+      margin: '0 auto',
       minWidth:'90%'
     }}>
       <Navigation />

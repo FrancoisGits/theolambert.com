@@ -3,7 +3,6 @@ import {graphql, useStaticQuery} from "gatsby"
 import Tooltip from "react-bootstrap/Tooltip"
 import OverlayTrigger from "react-bootstrap/OverlayTrigger"
 import styles from "./skills.module.css"
-import Container from "react-bootstrap/Container"
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -29,7 +28,7 @@ export default () => {
   const miscSkills = skills.filter(skills => skills.node.type === 'Misc')
 
   return (
-    <Container id="skills" className={styles.skills}>
+    <div id="skills" className={styles.skills}>
       <h1 className={styles.skills__title}>Main Skills</h1>
 
       <div className={styles.skills__technical}>
@@ -81,6 +80,6 @@ export default () => {
         </div>
       </div>
 
-    </Container>
+    </div>
   )
 }
