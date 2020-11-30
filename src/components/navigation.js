@@ -3,6 +3,7 @@ import {graphql, useStaticQuery} from "gatsby"
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
+
 export default () => {
   const data = useStaticQuery(graphql`
       query {
@@ -39,6 +40,10 @@ export default () => {
             </Nav.Link>
           ))
           }
+          <Nav.Link key="download" download href={`LAMBERT-Theo_Resume_2020.pdf`}>
+              <i className="fas fa-file-download"
+                 style={{fontSize: '2.5em'}}/>
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
