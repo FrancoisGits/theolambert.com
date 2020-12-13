@@ -11,8 +11,8 @@
     &__card {
       min-width: 15rem;
       margin-top: 1em;
-      box-shadow: 5px 5px 10px #e6e6e6,
-      -5px -5px 10px #ffffff;
+      box-shadow: 5px 5px 10px var(--neutral85),
+      -5px -5px 10px var(--neutralMax);
     }
   }
 
