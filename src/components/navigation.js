@@ -2,6 +2,7 @@ import React from 'react'
 import {graphql, useStaticQuery} from "gatsby"
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import styles from './navigation.module.css'
 
 
 export default () => {
@@ -22,27 +23,25 @@ export default () => {
   const socials = data.allSocials.edges
 
   return (
-    <Navbar collapseOnSelect bg="white" expand="lg" sticky="top">
+    <Navbar collapseOnSelect className={styles.navigation} expand="lg" sticky="top">
       <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#introduction">introduction</Nav.Link>
-          <Nav.Link href="#skills">skills</Nav.Link>
-          <Nav.Link href="#work_experience">work experience</Nav.Link>
-          <Nav.Link href="#education">education</Nav.Link>
-          <Nav.Link href="#hobbies">hobbies</Nav.Link>
+          <Nav.Link className={styles.navigation__link} href="#introduction">introduction</Nav.Link>
+          <Nav.Link className={styles.navigation__link} href="#skills">skills</Nav.Link>
+          <Nav.Link className={styles.navigation__link} href="#work_experience">work experience</Nav.Link>
+          <Nav.Link className={styles.navigation__link} href="#education">education</Nav.Link>
+          <Nav.Link className={styles.navigation__link} href="#hobbies">hobbies</Nav.Link>
         </Nav>
         <Nav className="flex-row justify-content-around">
           {socials.map(({node}) => (
             <Nav.Link key={node.id} target="_blank" href={node.link}>
-              <i className={node.faLogo}
-                 style={{fontSize: '2.5em'}}/>
+              <i className={[node.faLogo,styles.navigation__link__icon].join(' ')}/>
             </Nav.Link>
           ))
           }
           <Nav.Link key="download" download href={`LAMBERT-Theo_Resume_2020.pdf`}>
-              <i className="fas fa-file-download"
-                 style={{fontSize: '2.5em'}}/>
+              <i className={["fas fa-file-download", styles.navigation__link__icon].join(' ')}/>
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

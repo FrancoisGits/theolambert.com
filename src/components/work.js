@@ -40,7 +40,7 @@ export default () => {
 
       <CardDeck className={styles.work__cardDeck} style={{justifyContent: 'center'}}>
         {jobs.map(({node}) => (
-          <Card border="light" className={styles.work__cardDeck__card} key={node.id}>
+          <Card border="none" className={styles.work__cardDeck__card} key={node.id}>
             <Card.Header className={styles.work__cardDeck__card__header}>{formatDate(node.from)} to {formatDate(node.to)}</Card.Header>
 
             <Card.Body>
@@ -73,8 +73,7 @@ export default () => {
                     <div>
                       {node.involvedSkills.sort().map((skill) => (
                         <Badge pill
-                               variant={"dark"}
-                               style={{margin: '0 0.3em'}}
+                               className={styles.work__cardDeck__card__tabs__pills}
                         >{skill}</Badge>
                       ))}
                     </div>

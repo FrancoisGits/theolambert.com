@@ -1,9 +1,9 @@
-.edu{
+.edu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5em auto 2.5em auto;
-  max-width: 90%;
+  padding: 5vh 5vw;
+  min-width: 90%;
 
   &__cardDeck {
     justify-content: center;
@@ -11,8 +11,8 @@
     &__card {
       min-width: 15rem;
       margin-top: 1em;
-      box-shadow: 5px 5px 10px #e6e6e6,
-      -5px -5px 10px #ffffff;
+      box-shadow: 5px 5px 10px var(--neutral85),
+      -5px -5px 10px var(--neutralMax);
 
       &__header {
         border-bottom: none !important;
@@ -21,7 +21,7 @@
     }
   }
 
-  &__title{
+  &__title {
     margin-bottom: 1em;
   }
 }

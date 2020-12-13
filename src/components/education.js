@@ -30,7 +30,7 @@ export default () => {
 
       <CardDeck className={styles.edu__cardDeck}>
         {edu.map(({node}) => (
-          <Card border="light" className={styles.edu__cardDeck__card} key={node.id}>
+          <Card border="none" className={styles.edu__cardDeck__card} key={node.id}>
             <Card.Header className={styles.edu__cardDeck__card__header}>{node.from && node.from + ' to '} {node.to}</Card.Header>
 
             <Card.Body>
