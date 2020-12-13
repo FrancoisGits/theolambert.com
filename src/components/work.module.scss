@@ -37,11 +37,11 @@
         margin: 1em 0;
 
         &__link {
+          color: var(--neutral100) !important; //overriding bootstrap default
           margin: 0.15em 0.25em;
         }
 
         &__link[aria-selected="false"] {
-          color: var(--neutral100) !important; //overriding bootstrap default
           background-color: var(--color50);
           border-radius: 5px;
           box-shadow: 6px 6px 12px var(--color45),
