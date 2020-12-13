@@ -599,7 +599,7 @@ pre tt:after {
 
 :root {
   --baseHue: 215;
-  --contrastHue: calc(var(--baseHue) - 155);
+  --contrastHue: calc(var(--baseHue) - 70);
   --neutralMax: hsl(var(--baseHue), 0%, 100%);
   --neutral100: hsl(var(--baseHue), 2%, 97%);
   --neutral85: hsl(var(--baseHue), 2%, 85%);
@@ -616,7 +616,11 @@ pre tt:after {
   --color30: hsl(var(--baseHue), 90%, 30%);
 
   --contrast50: hsl(var(--contrastHue), 90%, 50%);
+  --contrast45: hsl(var(--contrastHue), 90%, 46%);
   --contrast40: hsl(var(--contrastHue), 90%, 40%);
+  --contrast35: hsl(var(--contrastHue), 90%, 35%);
+  --contrast30: hsl(var(--contrastHue), 90%, 30%);
+
   --contrast45alpha: hsla(var(--contrastHue), 90%, 45%, 0.6);
 }
 
