@@ -38,23 +38,25 @@
 
         &__link {
           margin: 0.15em 0.25em;
-          box-shadow: 6px 6px 12px var(--color45),
-          -6px -6px 12px var(--color55);
         }
 
         &__link[aria-selected="false"] {
           color: var(--neutral100) !important; //overriding bootstrap default
-          background-color: var(--color45);
+          background-color: var(--color50);
           border-radius: 5px;
+          box-shadow: 6px 6px 12px var(--color45),
+          -6px -6px 12px var(--color55);
 
           &:hover {
-            background-color: var(--color40);
+            background-color: var(--color45);
           }
         }
 
         &__link[aria-selected="true"] {
           cursor: default;
-          background-color: var(--color35) !important; //overriding bootstrap default
+          background-color: var(--contrast40) !important; //overriding bootstrap default
+          box-shadow: inset 4px 4px 9px var(--contrast30),
+           inset -4px -4px 9px var(--contrast45);
         }
       }
     }
