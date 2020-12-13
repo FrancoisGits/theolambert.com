@@ -7,7 +7,10 @@ const Layout = ({children}) => {
   return (
     <div style={{
       margin: '0 auto',
-      minWidth:'90%'
+      minWidth:'90%',
+      background:'var(--neutral100)',
+      display: 'flex',
+      flexDirection: 'column'
     }}>
       <Navigation />
       {children}

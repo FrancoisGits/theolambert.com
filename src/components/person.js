@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import * as Moment from "moment"
 import {Twemoji} from "react-emoji-render"
@@ -21,7 +21,33 @@ export default () => {
       }
   `).person
 
-  const age = Moment().diff(Moment(person.birthDate, 'YYYY-MM-DD'), 'years')
+  const age = Moment().diff(Moment(person.birthDate, 'YYYY-MM-DD'), 'years');
+
+  const funnyPhrases = [
+    " crafting a NASA spaceship in ",
+    " eating a delicious pizza in ",
+    " winning a Tekken game in ",
+    " doodling a space cowboy in ",
+    " reading a book with words in ",
+    " finishing my daily 1000 push-ups in ",
+    " playing some good ol' grunge in "
+  ];
+
+  const randInt = (min, max) => {
+    const range = max - min;
+    const rand = Math.floor(Math.random() * (range + 1));
+    return min + rand;
+  };
+
+  const animate = () => {
+    window.setInterval(() => {
+        document.querySelector('#funny-phrase').innerText = funnyPhrases[randInt(0, funnyPhrases.length - 1)];
+      },
+      1500
+    )
+  }
+
+  useEffect(animate);
 
   return (
     <div id="introduction" className={styles.person}>
@@ -33,7 +59,9 @@ export default () => {
           {person.firstName} {person.lastName}
         </span>
           <span className={styles.person__header__nameParagraph__location}>
-          {age}, <span>crafting NASA spaceships from</span> {person.location} <Twemoji text=':rocket:'/>
+          {age},
+            <span id="funny-phrase"> living in </span>
+            {person.location} <Twemoji text=':rocket:'/>
           </span>
         </p>
       </div>

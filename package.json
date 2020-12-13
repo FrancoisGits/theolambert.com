@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "firebase-admin": "^9.4.1",
+    "gatsby-link": "^2.7.0",
     "prettier": "2.1.2",
     "react-firebase-hooks": "^2.2.0",
     "react-router-dom": "^5.2.0"

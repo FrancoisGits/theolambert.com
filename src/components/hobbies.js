@@ -27,7 +27,7 @@ export default () => {
 
       <CardDeck className={styles.hobbies__cardDeck}>
         {hobbies.map(({node}) => (
-          <Card border="light" className={styles.hobbies__cardDeck__card} key={node.id}>
+          <Card border="none" className={styles.hobbies__cardDeck__card} key={node.id}>
             <Card.Body>
               <Card.Title className="text-center">
                 <i className={node.faLogo}
