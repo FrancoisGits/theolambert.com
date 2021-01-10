@@ -8,7 +8,7 @@ const Layout = ({children}) => {
     <div style={{
       margin: '0 auto',
       minWidth:'90%',
-      background:'var(--neutral100)',
+      background:'var(--neutral95)',
       display: 'flex',
       flexDirection: 'column'
     }}>
