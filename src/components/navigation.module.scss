@@ -1,5 +1,5 @@
 .navigation {
-  background-color: var(--neutral100);
+  background-color: var(--neutral95);
   display: flex;
   width: 100%;
 
@@ -12,7 +12,7 @@
     text-align: center;
 
     &:hover {
-      color: var(--color40) !important; // overriring bootstrap default
+      color: var(--color35) !important; // overriring bootstrap default
       animation: borderAni 0.5s infinite;
     }
 
@@ -21,7 +21,7 @@
       color: var(--color50);
 
       &:hover {
-        color: var(--color40);
+        color: var(--color35);
       }
     }
   }
@@ -29,7 +29,7 @@
 
 @keyframes borderAni {
   0%, 100% {
-    text-decoration: underline solid var(--color40);
+    text-decoration: underline solid var(--color35);
   }
   50% {
     text-decoration: underline solid transparent;

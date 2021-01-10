@@ -17,7 +17,7 @@
       border-radius: 50%;
       max-width: 12rem !important; //overriding bootstrap img-fluid
       box-shadow: 11px 11px 22px var(--neutral85),
-      -11px -11px 22px var(--neutralMax);
+      -11px -11px 22px var(--neutral100);
 
       &:hover {
         animation: hue-rotate 1s linear infinite;
@@ -48,12 +48,12 @@
       margin: 6vh 0;
       font-weight: 900;
       text-align: center;
-      color: var(--neutral100);
+      color: var(--neutral95);
       padding: 0.4em 0.7em;
       background-color: var(--color50);
       border-radius: 140px 12px;
       box-shadow: 5px 5px 10px var(--neutral85),
-      -5px -5px 10px var(--neutralMax);
+      -5px -5px 10px var(--neutral100);
     }
 
     &__intro {

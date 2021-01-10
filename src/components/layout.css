@@ -4,13 +4,14 @@ html {
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--neutral5) !important;
-  background-color: var(--neutral100);
+  background-color: var(--neutral95);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -600,13 +601,15 @@ pre tt:after {
   --baseHue: 215;
   --contrastHue: calc(var(--baseHue) - 70);
   --neutralMax: hsl(var(--baseHue), 0%, 100%);
-  --neutral100: hsl(var(--baseHue), 2%, 97%);
+  --neutral100: hsl(var(--baseHue), 2%, 100%);
+  --neutral95: hsl(var(--baseHue), 2%, 97%);
   --neutral85: hsl(var(--baseHue), 2%, 85%);
   --neutral40: hsl(var(--baseHue), 10%, 40%);
   --neutral25: hsl(var(--baseHue), 12%, 25%);
   --neutral10: hsl(var(--baseHue), 12%, 13%);
   --neutral5: hsl(var(--baseHue), 12%, 9%);
 
+  --color60: hsl(var(--baseHue), 90%, 59%);
   --color55: hsl(var(--baseHue), 90%, 56%);
   --color50: hsl(var(--baseHue), 90%, 50%);
   --color45: hsl(var(--baseHue), 90%, 46%);
@@ -628,38 +631,30 @@ pre tt:after {
 
 :root[theme='dark'] {
   /* Dark Theme */
-  --neutralMinDark: hsl(var(--baseHue),0%,0%);
-  --neutral5Dark: hsl(var(--baseHue),2%,8%);
-  --neutral10Dark: hsl(var(--baseHue),2%,11%);
-  --neutral75Dark: hsl(var(--baseHue),12%,75%);
+  --baseHue: 215;
+  --contrastHue: calc(var(--baseHue) - 70);
+  --neutralMax: hsl(var(--baseHue), 0%, 100%);
+  --neutral100: hsl(var(--baseHue), 18%, 17%);
+  --neutral95: hsl(var(--baseHue), 18%, 15%);
+  --neutral85: hsl(var(--baseHue), 18%, 10%);
+  --neutral40: hsl(var(--baseHue), 18%, 40%);
+  --neutral25: hsl(var(--baseHue), 18%, 25%);
+  --neutral10: hsl(var(--baseHue), 18%, 13%);
+  --neutral5: hsl(var(--baseHue), 18%, 95%);
 
-  --color30Dark: hsl(var(--baseHue),90%,30%);
-  --color35Dark: hsl(var(--baseHue),90%,32%);
-  --color45Dark: hsl(var(--baseHue),90%,43%);
-  --color40Dark: hsl(var(--baseHue),90%,38%);
-  --color50Dark: hsl(var(--baseHue),90%,50%);
-  --color55Dark: hsl(var(--baseHue),90%,55%);
+  --color60: hsl(var(--baseHue), 90%, 59%);
+  --color55: hsl(var(--baseHue), 90%, 56%);
+  --color50: hsl(var(--baseHue), 90%, 50%);
+  --color45: hsl(var(--baseHue), 90%, 46%);
+  --color40: hsl(var(--baseHue), 90%, 40%);
+  --color35: hsl(var(--baseHue), 90%, 60%);
+  --color30: hsl(var(--baseHue), 90%, 30%);
 
-  --contrast22Dark: hsl(var(--contrastHue),90%,22%);
-  --contrast25Dark: hsl(var(--contrastHue),90%,24%);
-  --contrast20Dark: hsl(var(--contrastHue),90%,20%);
-
-  /* Overrides */
-  --neutralMax: var(--neutralMinDark);
-  --neutral100: var(--neutral5Dark);
-  --neutral85: var(--neutral10Dark);
-  --neutral5: var(--neutral75Dark);
-
-  --color55: var(--color30Dark);
-  --color50: var(--color35Dark);
-  --color45: var(--color40Dark);
-  --color40: var(--color40Dark);
-  --color35: var(--color50Dark);
-  --color30: var(--color55Dark);
-
-  --contrast45: var(--contrast22Dark);
-  --contrast40: var(--contrast25Dark);
-  --contrast30: var(--contrast20Dark);
+  --contrast50: hsl(var(--contrastHue), 90%, 50%);
+  --contrast45: hsl(var(--contrastHue), 90%, 46%);
+  --contrast40: hsl(var(--contrastHue), 90%, 40%);
+  --contrast35: hsl(var(--contrastHue), 90%, 35%);
+  --contrast30: hsl(var(--contrastHue), 90%, 30%);
 
   --contrast45alpha: hsla(var(--contrastHue), 90%, 45%, 0.6);
 }
@@ -667,7 +662,7 @@ pre tt:after {
 
 .card {
   background-color: var(--color50) !important; /* overriding bootstrap default */
-  color: var(--neutral100);
+  color: var(--neutral95);
 }
 
 .card-body .text-muted {

@@ -4,9 +4,9 @@
   align-items: flex-start;
   padding: 5vh 5vw;
   background-color: var(--color50);
-  color: var(--neutral100);
+  color: var(--neutral95);
   box-shadow: 5px 5px 10px var(--neutral85),
-  -5px -5px 10px var(--neutralMax);;
+  -5px -5px 10px var(--neutral100);
 
   &__title {
     margin: 0 auto 1em auto;
@@ -57,7 +57,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        background-color: var(--neutral100);
+        background-color: var(--neutral95);
         padding-left: 0.35em;
         margin: 0.4em;
         border-radius: 5px;
@@ -72,7 +72,7 @@
 
         &__level {
           background-color: var(--contrast40);
-          color: var(--neutral100);
+          color: var(--neutral95);
           font-size: 0.9em;
           padding: 0.35em;
           z-index: 1;
