@@ -70,6 +70,9 @@ export default () => {
             </Nav.Link>
           ))
           }
+          <Nav.Link key="mail" href={`https://aemail.com/yPy6`}>
+            <i className={["fas fa-envelope", styles.navigation__link__icon].join(' ')}/>
+          </Nav.Link>
           <Nav.Link key="download" download href={`LAMBERT-Theo_Resume_2020.pdf`}>
             <i className={["fas fa-file-download", styles.navigation__link__icon].join(' ')}/>
           </Nav.Link>
