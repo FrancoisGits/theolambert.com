@@ -24,13 +24,13 @@ export default () => {
   const age = Moment().diff(Moment(person.birthDate, 'YYYY-MM-DD'), 'years');
 
   const funnyPhrases = [
-    " crafting a NASA spaceship in ",
-    " eating a delicious pizza in ",
-    " winning a Tekken game in ",
-    " doodling a space cowboy in ",
-    " reading a book with words in ",
-    " finishing my daily 1000 push-ups in ",
-    " playing some good ol' grunge in "
+    " en train de coder une fusée à ",
+    " en train de manger une pizza à ",
+    " en train de gagner une partie de Tekken à ",
+    " en train de dessiner un cowboy de l'espace à ",
+    " en train de lire un livre (avec des mots !) à ",
+    " en train de finir mes 10000 pompes quotidiennes à ",
+    " en train de jouer un morceau de grunge à "
   ];
 
   const randInt = (min, max) => {
@@ -59,8 +59,8 @@ export default () => {
           {person.firstName} {person.lastName}
         </span>
           <span className={styles.person__header__nameParagraph__location}>
-          {age},
-            <span id="funny-phrase"> living in </span>
+          {age} ans,
+            <span id="funny-phrase"> je vis à </span>
             {person.location} <Twemoji text=':rocket:'/>
           </span>
         </p>

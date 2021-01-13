@@ -48,10 +48,10 @@ export default () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link className={styles.navigation__link} href="#introduction">introduction</Nav.Link>
-          <Nav.Link className={styles.navigation__link} href="#skills">skills</Nav.Link>
-          <Nav.Link className={styles.navigation__link} href="#work_experience">work experience</Nav.Link>
-          <Nav.Link className={styles.navigation__link} href="#education">education</Nav.Link>
-          <Nav.Link className={styles.navigation__link} href="#hobbies">hobbies</Nav.Link>
+          <Nav.Link className={styles.navigation__link} href="#skills">compétences</Nav.Link>
+          <Nav.Link className={styles.navigation__link} href="#work_experience">expérience professionnelle</Nav.Link>
+          <Nav.Link className={styles.navigation__link} href="#education">formation</Nav.Link>
+          <Nav.Link className={styles.navigation__link} href="#hobbies">loisirs</Nav.Link>
         </Nav>
         <Nav className="flex-row justify-content-center">
           <Nav.Link onKeyDown={handleKey}
@@ -73,7 +73,7 @@ export default () => {
           <Nav.Link key="mail" href={`https://aemail.com/yPy6`}>
             <i className={["fas fa-envelope", styles.navigation__link__icon].join(' ')}/>
           </Nav.Link>
-          <Nav.Link key="download" download href={`LAMBERT-Theo_Resume_2020.pdf`}>
+          <Nav.Link key="download" download href={`LAMBERT-Theo_CV_2020.pdf`}>
             <i className={["fas fa-file-download", styles.navigation__link__icon].join(' ')}/>
           </Nav.Link>
         </Nav>

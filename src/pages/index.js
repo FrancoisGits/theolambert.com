@@ -15,7 +15,7 @@ const IndexPage = () => (
       <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'/>
       <script src="https://kit.fontawesome.com/51fc2db30d.js" crossOrigin="anonymous"></script>
     </Helmet>
-    <SEO title="Resume"/>
+    <SEO title="Curriculum Vitae"/>
     <Person/>
     <Skills/>
     <Work/>

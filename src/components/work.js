@@ -36,12 +36,12 @@ export default () => {
 
   return (
     <div id="work_experience" className={styles.work}>
-      <h1 className={styles.work__title}>Work Experience</h1>
+      <h1 className={styles.work__title}>Expérience professionnelle</h1>
 
       <CardDeck className={styles.work__cardDeck} style={{justifyContent: 'center'}}>
         {jobs.map(({node}) => (
           <Card border="none" className={styles.work__cardDeck__card} key={node.id}>
-            <Card.Header className={styles.work__cardDeck__card__header}>{formatDate(node.from)} to {formatDate(node.to)}</Card.Header>
+            <Card.Header className={styles.work__cardDeck__card__header}>{formatDate(node.from)} à {formatDate(node.to)}</Card.Header>
 
             <Card.Body>
               <Card.Title>{node.job}</Card.Title>

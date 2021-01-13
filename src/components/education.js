@@ -26,12 +26,12 @@ export default () => {
 
   return (
     <div id="education" className={styles.edu}>
-      <h1 className={styles.edu__title}>Education</h1>
+      <h1 className={styles.edu__title}>Formation</h1>
 
       <CardDeck className={styles.edu__cardDeck}>
         {edu.map(({node}) => (
           <Card border="none" className={styles.edu__cardDeck__card} key={node.id}>
-            <Card.Header className={styles.edu__cardDeck__card__header}>{node.from && node.from + ' to '} {node.to}</Card.Header>
+            <Card.Header className={styles.edu__cardDeck__card__header}>{node.from && node.from + ' à '} {node.to}</Card.Header>
 
             <Card.Body>
               <Card.Title>{node.name}</Card.Title>

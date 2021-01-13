@@ -23,7 +23,7 @@ export default () => {
 
   return (
     <div id="hobbies" className={styles.hobbies}>
-      <h1 className={styles.hobbies__title}>Hobbies</h1>
+      <h1 className={styles.hobbies__title}>Loisirs</h1>
 
       <CardDeck className={styles.hobbies__cardDeck}>
         {hobbies.map(({node}) => (
