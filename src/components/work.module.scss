@@ -1,4 +1,5 @@
 .work {
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,12 +8,14 @@
 
   &__title {
     margin-bottom: 1em;
+    font-family: "Roboto Slab", serif;
   }
 
   &__cardDeck {
     justify-content: center;
 
     &__card {
+      font-family: "Roboto", sans-serif;
       min-width: 15rem;
       margin-top: 1em;
       box-shadow: 5px 5px 10px var(--neutral85),
@@ -22,7 +25,12 @@
         border-bottom: none !important;
         box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
       }
+
+      &__title{
+        font-family: "Roboto Slab", sans-serif !important;
+      }
     }
+
 
     &__card__tabs__pills {
       margin: 0 0.3em;
@@ -37,7 +45,7 @@
         margin: 1em 0;
 
         &__link {
-          color: var(--neutral95) !important; //overriding bootstrap default
+          color: var(--lightFont) !important; //overriding bootstrap default
           margin: 0.15em 0.25em;
         }
 
@@ -56,7 +64,7 @@
           cursor: default;
           background-color: var(--contrast40) !important; //overriding bootstrap default
           box-shadow: inset 4px 4px 9px var(--contrast30),
-           inset -4px -4px 9px var(--contrast45);
+          inset -4px -4px 9px var(--contrast45);
         }
       }
     }

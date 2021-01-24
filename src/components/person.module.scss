@@ -4,6 +4,7 @@
   align-items: center;
   padding: 5vh 5vw;
   min-width: 90%;
+  font-family: 'Roboto', sans-serif;
 
   &__header {
     display: flex;
@@ -50,10 +51,11 @@
       text-align: center;
       color: var(--neutral95);
       padding: 0.4em 0.7em;
-      background-color: var(--color50);
+      background-color: var(--contrast50);
       border-radius: 140px 12px;
       box-shadow: 5px 5px 10px var(--neutral85),
       -5px -5px 10px var(--neutral100);
+      font-family: "Roboto Slab", serif;
     }
 
     &__intro {

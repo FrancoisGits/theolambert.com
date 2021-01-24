@@ -43,9 +43,9 @@ export default () => {
     window.setInterval(() => {
         document.querySelector('#funny-phrase').innerText = funnyPhrases[randInt(0, funnyPhrases.length - 1)];
       },
-      1500
+      2500
     )
-  }
+  };
 
   useEffect(animate);
 

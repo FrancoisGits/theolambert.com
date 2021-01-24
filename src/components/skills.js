@@ -47,6 +47,23 @@ export default () => {
         </div>
       </div>
 
+      <div className={styles.skills__misc}>
+        <h3 className={styles.skills__misc__title}>Soft skills</h3>
+        <div className={styles.skills__misc__list}>
+          {miscSkills.map(({node}) => (
+            <OverlayTrigger placement='top' delay={{show: 50, hide: 300}}
+                            overlay={<Tooltip id={node.id + 'tooltip'}>{node.name}</Tooltip>}>
+              <div className={styles.skills__misc__list__item}>
+                <i key={node.id}
+                   className={node.devicon ? node.devicon : node.faLogo}
+                   style={{fontSize: '3em'}}/>
+              </div>
+            </OverlayTrigger>
+          ))
+          }
+        </div>
+      </div>
+
       <div className={styles.skills__language}>
         <h3 className={styles.skills__language__title}>Linguistiques</h3>
         <div className={styles.skills__language__list}>
@@ -58,23 +75,6 @@ export default () => {
               <span className={styles.skills__language__list__item__name}>{node.name}</span>
               <span className={styles.skills__language__list__item__level}>{node.level}</span>
             </div>
-          ))
-          }
-        </div>
-      </div>
-
-      <div className={styles.skills__misc}>
-        <h3 className={styles.skills__misc__title}>Divers</h3>
-        <div className={styles.skills__misc__list}>
-          {miscSkills.map(({node}) => (
-            <OverlayTrigger placement='top' delay={{show: 50, hide: 300}}
-                            overlay={<Tooltip id={node.id + 'tooltip'}>{node.name}</Tooltip>}>
-              <div className={styles.skills__misc__list__item}>
-                <i key={node.id}
-                   className={node.devicon ? node.devicon : node.faLogo}
-                   style={{fontSize: '3em'}}/>
-              </div>
-            </OverlayTrigger>
           ))
           }
         </div>

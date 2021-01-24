@@ -31,10 +31,10 @@ export default () => {
       <CardDeck className={styles.edu__cardDeck}>
         {edu.map(({node}) => (
           <Card border="none" className={styles.edu__cardDeck__card} key={node.id}>
-            <Card.Header className={styles.edu__cardDeck__card__header}>{node.from && node.from + ' à '} {node.to}</Card.Header>
+            <Card.Header className={styles.edu__cardDeck__card__header}>{node.from && node.from + ' à '} {node.to && node.to}</Card.Header>
 
             <Card.Body>
-              <Card.Title>{node.name}</Card.Title>
+              <Card.Title className={styles.edu__cardDeck__card__title}>{node.name}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 <span>{node.place && node.place + ', '}{node.city}</span>
               </Card.Subtitle>

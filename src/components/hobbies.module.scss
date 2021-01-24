@@ -1,9 +1,14 @@
 .hobbies {
   display: flex;
+  font-family: "Roboto", sans-serif;
   flex-direction: column;
   align-items: center;
   padding: 5vh 5vw;
   min-width: 90%;
+
+  &__title{
+    font-family: "Roboto Slab", serif;
+  }
 
   &__cardDeck {
     justify-content: center;

@@ -1,6 +1,7 @@
 import React from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import * as Moment from "moment"
+import 'moment/locale/fr'
 import Card from "react-bootstrap/Card"
 import CardDeck from "react-bootstrap/CardDeck"
 import Badge from "react-bootstrap/Badge"
@@ -31,6 +32,8 @@ export default () => {
   const jobs = data.allWorkExperience.edges
 
   const formatDate = (date) => {
+    Moment.locale('fr');
+
     return Moment(date, "YYYY-MM").format('MMM YYYY')
   }
 
@@ -44,7 +47,7 @@ export default () => {
             <Card.Header className={styles.work__cardDeck__card__header}>{formatDate(node.from)} à {formatDate(node.to)}</Card.Header>
 
             <Card.Body>
-              <Card.Title>{node.job}</Card.Title>
+              <Card.Title className={styles.work__cardDeck__card__title}>{node.job}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 <span>{node.place && node.place + ', '}{node.city}</span>
               </Card.Subtitle>
