@@ -38,8 +38,11 @@ export default () => {
             <OverlayTrigger placement='top' delay={{show: 50, hide: 300}}
                             overlay={<Tooltip id={node.id + 'tooltip'}>{node.name}</Tooltip>}>
               <div className={styles.skills__technical__list__item}>
+                {/*todo: replace all the devicons by devicon alternative in firebase*/}
                 <i key={node.id}
-                   className={node.devicon ? node.devicon : node.faLogo}
+                   className={node.devicon ?
+                     node.devicon === 'devicons devicons-intellij' ? 'devicon-intellij-plain' : node.devicon
+                     : node.faLogo}
                    style={{fontSize: '4em'}}/>
               </div>
             </OverlayTrigger>
